@@ -2,9 +2,110 @@
   text-align: center;
 }
 
+body, #root{
+  height: 100vh;
+ 
+}
+
+.outer-outer{
+  background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ),url('images/city.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center
+
+}
+
+.outer-inner{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin: auto;
+  height: 20%;
+  width: 50%;
+  border-radius: 5px;
+  background-color: whitesmoke;
+  text-align: centre; 
+  
+  
+}
+
+
+.quote{
+  font-family:arial;
+  font-size: larger;
+  text-shadow: 1px 1px 1px 1px blue;
+}
+
+ button{
+   font-size: 10px;
+   padding: 6px 20px;
+   border-radius: 15px;
+   box-shadow: 1px 1px 1px 1px blue;
+   border: none;
+   color: blue;
+   text-decoration: double;
+   text-transform: uppercase;
+   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+ }
+
+ .button:hover {
+  animation: rotate 0.7s ease-in-out both;
+  /*animation: storm 0.7s ease-in-out both;*/
+  /*animation-delay: 0.06s;*/
+}
+
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg) translate3d(0, 0, 0);
+  }
+  25% {
+    transform: rotate(3deg) translate3d(0, 0, 0);
+  }
+  50% {
+    transform: rotate(-3deg) translate3d(0, 0, 0);
+  }
+  75% {
+    transform: rotate(1deg) translate3d(0, 0, 0);
+  }
+  100% {
+    transform: rotate(0deg) translate3d(0, 0, 0);
+  }
+}
+  
+@keyframes storm {
+  0% {
+    transform: translate3d(0, 0, 0) translateZ(0);
+  }
+  25% {
+    transform: translate3d(4px, 0, 0) translateZ(0);
+  }
+  50% {
+    transform: translate3d(-3px, 0, 0) translateZ(0);
+  }
+  75% {
+    transform: translate3d(2px, 0, 0) translateZ(0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0) translateZ(0);
+  }
+}  
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+
+@media only screen and (max-width: 600px){
+  .outer-inner{
+    width:80%;
+  }
+
 }
 
 @media (prefers-reduced-motion: no-preference) {
